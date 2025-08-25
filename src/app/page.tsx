@@ -6,7 +6,7 @@ import ArtCard from '@/components/artCard';
 import "./globals.css";
 import FetchApi from '@/helper/fetchApi';
 import"./page.module.css";
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import InfiniteScroll from "react-infinite-scroll-component";
 import { motion } from 'framer-motion';
 
@@ -14,10 +14,9 @@ import { motion } from 'framer-motion';
 
 
 
-export default function page() {
+export default function Page() {
 
   const searchParams  = useSearchParams();
-  const router = useRouter();
   const query = searchParams.get("search");
 
   interface Image {

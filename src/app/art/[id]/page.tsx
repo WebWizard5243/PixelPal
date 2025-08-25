@@ -6,7 +6,7 @@ import FetchApi from '@/helper/fetchApi';
 import ArtCard from '@/components/artCard';
 import "@/app/styles/artPage.css";
 
-export default function page({params}: any) {
+export default function Page({params}: any) {
 
 
   interface Image {
@@ -21,15 +21,7 @@ export default function page({params}: any) {
     const [image, setImages] = useState<Image[]>([]);
     const [suggestion, setSuggestion] = useState("");
 
-    // async function loadDetails(){
-    //   const response = await axios.post("/api/art",{id : unwrapParams.id});
-    //    setSuggestion(response.data.hits[0].tags);
-    //   setMainImages(response.data.hits);
-    // }
-    // useEffect(() =>{
-    //   loadDetails();
-    //   FetchApi(suggestion).then(data => setImages(data.hits));
-    // },[unwrapParams.id,suggestion])
+    
 
 
     useEffect(() => {
@@ -47,7 +39,7 @@ useEffect(() => {
   if (!suggestion) return; // Don't fetch if tags are not set
   const tagsArray = suggestion.split(",").map(tag => tag.trim());
   const mainTag = tagsArray[0];
-  // const mainTag = tagsArray[Math.floor(Math.random() * tagsArray.length)];
+
   FetchApi(mainTag).then(data => setImages(data.hits));
 }, [suggestion]); // Only run when suggestion changes
 
