@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Edu_NSW_ACT_Hand_Pre } from "next/font/google"; 
+
+const edu = Edu_NSW_ACT_Hand_Pre({
+  subsets: ["latin"],
+  weight: ["400", "700"], 
+  variable: "--font-edu",
+});
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
+  variable: "--font-geist-sans",  
   subsets: ["latin"],
 });
 
@@ -24,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}  ${edu.variable}`}>
         {children}
       </body>
     </html>
