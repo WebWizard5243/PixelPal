@@ -104,7 +104,7 @@ body{
   }
   .masonry{
     margin-top: 100px;
-    column-count:3 ;
+    column-count:2 ;
   }
   form{
     display: flex;
