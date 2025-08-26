@@ -2,7 +2,7 @@
     display: flex;
     align-items: flex-start;
     gap: 30px;
-    padding-top: 170px;
+    margin-top: 160px;
 
 }
 .right-side {
@@ -30,15 +30,16 @@
 }
 .left-side img{
   border-radius: 10px;
-  width: 62%;
-  height:60%;
+  width: 52%;
+  height:auto;
 
 }
 
 @media(max-width : 767px){
   .art-container{
+    /* align-items: center; */
     flex-direction: column;
-    padding-top: 100px; 
+    margin-top: 100px; 
   }
   .left-side img{
     width: 75%;
