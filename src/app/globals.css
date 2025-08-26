@@ -65,6 +65,7 @@ body{
 /* Image styling */
 .art-image {
   width: 100%;
+  height: auto;
   display: block;
    transition: transform 0.3s ease;
 }
@@ -77,7 +78,7 @@ body{
   font-size: 1rem;
 }
 .masonry {
-  padding-top: 150px ;
+  margin-top: 150px ;
   column-count: 4; /* number of columns */
   column-gap: 1rem;
 }

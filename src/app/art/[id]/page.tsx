@@ -13,6 +13,8 @@ export default function Page({params}: any) {
   id: number;
   webformatURL: string;
   tags: string;
+  webformatWidth : number;
+  webformatHeight : number;
   }
 
   const unwrapParams : any = use(params);
@@ -51,14 +53,17 @@ useEffect(() => {
          <div className='art-container'>
        {mainImages.map((img) => (
         <div className='left-side'key={img.id}>
-    <img  src={img.webformatURL} alt={img.tags} />
+    <img  
+    src={img.webformatURL} 
+    alt={img.tags}
+     />
     <h3></h3>
     </div>
   ))}
   <div className='right-side' >
   {image.map((img) => (
     
-      <ArtCard key = {img.id}  id ={img.id}  image = {img.webformatURL} title = {img.tags}></ArtCard>
+      <ArtCard key = {img.id}  id ={img.id}  image = {img.webformatURL} title = {img.tags} width={img.webformatWidth} height ={img.webformatHeight} ></ArtCard>
 
   ))}
     </div>

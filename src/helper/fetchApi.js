@@ -4,7 +4,6 @@ import axios from "axios";
 export default async function FetchApi(input,page) {
     try {
         const key = process.env.NEXT_PUBLIC_API_KEY;
-          console.log(key);
     const response = await axios.get(`https://pixabay.com/api/?key=${key}&q=${encodeURIComponent(input)}&image_type=all&page=${page}`);
     const data = response.data;
     if (!data){
