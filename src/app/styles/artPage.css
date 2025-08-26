@@ -30,8 +30,9 @@
 }
 .left-side img{
   border-radius: 10px;
-  width: 37%;
-  height:auto;
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
 
 }
 
@@ -39,6 +40,7 @@
   .art-container{
     /* align-items: center; */
     flex-direction: column;
+    align-items: center;
     margin-top: 100px; 
   }
   .left-side img{
